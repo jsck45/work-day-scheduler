@@ -27,6 +27,11 @@ $(document).ready(function() {
     timeBlock.find('.saveBtn').on('click', function() {
       var textInput = timeBlock.find('.description').val();
       localStorage.setItem(timeBlock.attr('id'), textInput);
+
+      showSavedSuccessMessage(); // Show "appointment saved" message
+
+      setTimeout(clearSavedSuccessMessage, 1000); // for 1 second
+
     });
   });
 });
@@ -52,3 +57,15 @@ function getDayWithSuffix(day) {
 // Display today's date in header
 const today = dayjs();
 $('#currentDay').text(today.format('dddd, MMMM ') + getDayWithSuffix(today.format('D')));
+
+// Function to display the "appointment saved" message
+function showSavedSuccessMessage() {
+  $('.saved-success').text('appointment saved!');
+}
+
+// Function to clear the "appointment saved" message
+function clearSavedSuccessMessage() {
+  $('.saved-success').text(''); 
+}
+
+

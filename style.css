@@ -4,12 +4,11 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
   background-image: url('./images/background.jpg');
-  background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-repeat: repeat-y;
+  background-size: auto;
   background-position: center top;
+  min-height: 100vh;
 }
 
 @font-face {
@@ -95,4 +94,12 @@ textarea {
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+}
+
+.saved-success {
+  font-size: 25px;
+  min-height:70px;
+  color: var(--chalk-white);
+  text-align: center;
+  font-family: 'Roboto', sans-serif, 'Tahoma', sans-serif;
 }
